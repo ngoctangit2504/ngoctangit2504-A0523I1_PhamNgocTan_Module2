@@ -18,6 +18,7 @@ public class DeleteElement {
         for (int j = index_del; j < arr.length-1; j++) {
             arr[j] = arr[j+1];
         }
+        System.out.println("Mảng sau khi xóa phần tử vừa nhập");
         for (int i = 0; i < arr.length; i++) {
             System.out.println(arr[i]);
         }
