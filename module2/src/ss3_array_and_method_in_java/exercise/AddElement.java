@@ -7,27 +7,41 @@ public class AddElement {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Nhập số phần tử của mảng");
         int n = scanner.nextInt();
+        // Thêm phần tử vào mảng gốc
+        int arr[] = new int[n];
+        for (int i = 0; i < arr.length; i++) {
+            System.out.println("Nhập phần tử tại vi trí " + i);
+            arr[i] = scanner.nextInt();
+        }
+
         System.out.println("Nhập số cần chèn");
         int x = scanner.nextInt();
         System.out.println("Nhập vị trí cần chèn");
         int index = scanner.nextInt();
+        int index_up = index;
 
-        int arr[] = new int[n];
-        arr[0] = 10;
-        arr[1] = 4;
-        arr[2] = 6;
-        arr[3] = 7;
-        arr[4] = 8;
+        System.out.println("mảng vừa tạo");
+        for (int i = 0; i < arr.length; i++) {
+            System.out.println(arr[i]);
+        }
+        System.out.println("Phần tử chèn là " + x + " nằm tại vị trí " + index);
 
-        boolean flag = true;
-        int arr_length_1 = arr.length-1;
-        if (x <= 1 || index >= arr.length-1){
-            System.out.println("Không chèn được phần tử vào mảng");
-            flag = false;
-        } if (flag) {
-
+        // Tạo mảng và dời vị trí các phần tử sau phần tử đã chèn.
+        int arr_change[] = new int[n - index];
+        for (int i = 0; i < arr_change.length-1; i++) {
+            arr_change[i] = arr[index_up++];
         }
 
+        // Đặt các phần tử vào vị trí đúng như yêu cầu.
+        int u = 0;
+        for (int i = index + 1; i < arr_change.length; i++) {
+            arr[i] = arr_change[u];
+            u++;
+        }
+        arr[index] = x;
+
+        // Hiển thị mảng cuối cùng
+        System.out.println("Mảng sau khi chèn phần tử :");
         for (int i = 0; i < arr.length; i++) {
             System.out.println(arr[i]);
         }
