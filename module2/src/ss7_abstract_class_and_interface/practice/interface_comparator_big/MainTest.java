@@ -13,8 +13,5 @@ public class MainTest {
         for (int i = 0; i < circles.length; i++) {
             System.out.println(circles[i]);
         }
-
-        Comparator circleComparator = new CircleComparator();
-        Arrays.sort(circles, circleComparator);
     }
 }
