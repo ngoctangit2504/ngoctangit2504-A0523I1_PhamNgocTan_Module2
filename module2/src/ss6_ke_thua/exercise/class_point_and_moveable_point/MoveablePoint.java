@@ -63,6 +63,6 @@ public class MoveablePoint extends Point{
         System.out.println(demo1.toString());
         demo1.setY(88);
         System.out.println(demo1.getY());
-        
+
     }
 }
