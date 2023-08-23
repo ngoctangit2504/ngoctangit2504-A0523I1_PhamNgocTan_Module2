@@ -3,17 +3,17 @@ package ss4_class_object.exercise.stop_watch;
 import java.time.LocalTime;
 
 public class StopWatch {
-    private LocalTime startTime, endTime;
+    private LocalTime startTime = LocalTime.now();
+    private LocalTime endTime = LocalTime.now();
 
     public StopWatch () {
-        startTime = LocalTime.now();
-        endTime = LocalTime.now();
     }
 
-    public StopWatch (LocalTime startTime, LocalTime endTime) {
+    public StopWatch(LocalTime startTime, LocalTime endTime) {
         this.startTime = startTime;
-        this.endTime = startTime;
+        this.endTime = endTime;
     }
+
     public LocalTime getStartTime() {
         return startTime;
     }
@@ -22,16 +22,24 @@ public class StopWatch {
         return endTime;
     }
 
-    public void start() {
-        startTime = LocalTime.now();
+    public LocalTime start() {
+        return LocalTime.now();
     }
 
-    public void stop() {
-        endTime = LocalTime.now();
+    public LocalTime stop() {
+        return LocalTime.now();
     }
 
-    public int getElapsedTime() {
-        int miliSecond = ((getEndTime().getHour()-getStartTime().getHour())*3600 + (getEndTime().getMinute()-getStartTime().getMinute())*60 + (getEndTime().getSecond()-getStartTime().getSecond())*10000000);
+    @Override
+    public String toString() {
+        return "StopWatch{" +
+                "startTime=" + getStartTime() +
+                ", endTime=" + getEndTime() +
+                '}';
+    }
+
+        public int getElapsedTime() {
+        int miliSecond = (stop().getSecond() - start().getSecond());
         return miliSecond;
     }
 }
