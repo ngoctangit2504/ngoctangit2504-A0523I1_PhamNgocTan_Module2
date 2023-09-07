@@ -17,7 +17,6 @@ public class StudentService implements IStudentService {
             if (students[i]!=null){
                 System.out.println((1+i) + "." + students[i]);
             }
-
         }
     }
 
