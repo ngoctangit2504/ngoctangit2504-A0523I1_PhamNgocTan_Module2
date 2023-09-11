@@ -62,7 +62,7 @@ public class ProductService implements IProductService {
         String name = scanner.nextLine();
 
         System.out.println("nhập giá edit");
-        double price = scanner.nextDouble();
+        double price = Double.parseDouble(scanner.nextLine());
 
         System.out.println("Nhập mô tả sản phẩm edit");
         String describe = scanner.nextLine();
