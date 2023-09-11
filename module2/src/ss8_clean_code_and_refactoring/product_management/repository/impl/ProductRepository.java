@@ -57,11 +57,8 @@ public class ProductRepository implements IProductRepository {
     @Override
     public void searchProduct(String name) {
         for (int i = 0; i < products.length; i++) {
-            if (products[i].getName() == name) {
-                System.out.println("Ví dụ thôi");
-                break;
-            } else {
-                System.out.println("Tên không khớp");
+            if ((products[i].getName()).equals(name)) {
+                System.out.println(products[i]);
                 break;
             }
         }
