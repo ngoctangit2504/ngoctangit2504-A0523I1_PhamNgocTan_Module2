@@ -8,6 +8,4 @@ public class Node {
         this.key = key;
         this.next = null;
     }
-
-
 }

@@ -4,34 +4,33 @@ import java.util.Scanner;
 import java.util.Stack;
 
 public class MyStackInteger {
-    public static void pushElement(Stack<Integer> elemnt) {
+    public static void pushElement(Stack<Integer> stack, int n) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Nhập số lượng phần tử muốn thêm vào Stack.");
-        int n = scanner.nextInt();
         for (int i = 0; i < n; i++) {
-            System.out.println("Nhập phần tử thứ "+(i+1));
+            System.out.println("Nhập phần tử thứ " + (i + 1));
             int value = scanner.nextInt();
-            elemnt.push(value);
+            stack.push(value);
         }
+        System.out.println("Mảng của chúng ta " + stack);
     }
 
-    public static void reseverToNewStack(Stack<Integer> beforeStack) {
+    public static void reseverToNewStack(Stack<Integer> stack, int n) {
         Stack<Integer> newStack = new Stack<>();
-        System.out.println(newStack);
-
-        for (int n : beforeStack) {
-            newStack.push(beforeStack.pop());
-            System.out.println(newStack);
+        for (int i = 0; i < n; i++) {
+            newStack.push(stack.pop());
         }
+        System.out.println("Stack sau khi đảo ngược phần tử: " + newStack);
     }
-
 
 
     public static void main(String[] args) {
-        Stack<Integer> stack = new Stack<>();
-        pushElement(stack);
-        System.out.println("Stack của chúng ta : "+stack);
-        System.out.println(stack.size());
-        reseverToNewStack(stack);
+        Scanner scanner = new Scanner(System.in);
+        Stack<Integer> number = new Stack<>();
+        System.out.println("Nhập số lượng phần tử muốn thêm vào stack");
+        int size = scanner.nextInt();
+
+        pushElement(number, size);
+
+        reseverToNewStack(number, size);
     }
 }
