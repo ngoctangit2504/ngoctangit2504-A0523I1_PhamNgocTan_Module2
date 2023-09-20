@@ -24,19 +24,14 @@ public class ProductService implements IProductService {
     @Override
     public void add() {
         Scanner scanner = new Scanner(System.in);
-
         System.out.println("nhập id");
         int id = Integer.parseInt(scanner.nextLine());
-
         System.out.println("nhập tên");
         String name = scanner.nextLine();
-
         System.out.println("nhập giá");
         double price = Double.parseDouble(scanner.nextLine());
-
         System.out.println("Nhập mô tả sản phẩm");
         String describe = scanner.nextLine();
-
         Product product = new Product(id, name, price, describe);
         productRepository.addProduct(product);
     }
@@ -54,19 +49,14 @@ public class ProductService implements IProductService {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Nhập id product muốn sửa");
         int editId = Integer.parseInt(scanner.nextLine());
-
         System.out.println("nhập id edit");
         int id = Integer.parseInt(scanner.nextLine());
-
         System.out.println("nhập tên edit");
         String name = scanner.nextLine();
-
         System.out.println("nhập giá edit");
         double price = Double.parseDouble(scanner.nextLine());
-
         System.out.println("Nhập mô tả sản phẩm edit");
         String describe = scanner.nextLine();
-
         Product product = new Product(id, name, price, describe);
         productRepository.editProduct(editId, product);
     }
