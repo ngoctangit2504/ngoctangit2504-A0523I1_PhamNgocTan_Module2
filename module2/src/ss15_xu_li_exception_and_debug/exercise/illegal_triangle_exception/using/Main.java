@@ -22,7 +22,7 @@ public class Main {
             int c = scanner.nextInt();
 
             try {
-                check.checkTriangleEdges(a,b,c);
+                check.checkTriangleEdges(a, b, c);
             } catch (TriangleEdgesException ex) {
                 System.out.println(ex.getMessage());
             }
