@@ -1,2 +1,4 @@
-package repository.impl;public class ContactRepository {
+package repository.impl;
+
+public class ContactRepository {
 }

@@ -1,2 +1,4 @@
-package repository;public interface IBookingRepository {
+package repository;
+
+public interface IBookingRepository {
 }

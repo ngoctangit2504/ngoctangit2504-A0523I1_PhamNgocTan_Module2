@@ -1,2 +1,4 @@
-package repository.impl;public class BookingRepository {
+package repository.impl;
+
+public class BookingRepository {
 }

@@ -1,2 +1,4 @@
-package service.impl;public class BookingService {
+package service.impl;
+
+public class BookingService {
 }

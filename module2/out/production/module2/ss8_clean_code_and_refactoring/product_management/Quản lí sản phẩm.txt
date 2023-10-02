@@ -1,0 +1,9 @@
+Quản lí sản phẩm
+Thuộc Tính
+ID, Name, Giá, Mô tả sản phẩm
+Chức năng
+- Hiển thị sản phẩm
+- Thêm mới
+- Xóa
+- Update
+- Tìm kiếm sản phẩm đúng theo tên

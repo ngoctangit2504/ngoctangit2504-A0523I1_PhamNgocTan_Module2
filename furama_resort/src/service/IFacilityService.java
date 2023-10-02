@@ -1,2 +1,4 @@
-package service;public interface IFacilityService {
+package service;
+
+public interface IFacilityService {
 }

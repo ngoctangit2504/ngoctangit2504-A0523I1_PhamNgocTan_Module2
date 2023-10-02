@@ -1,2 +1,4 @@
-package repository;public interface IFacilityRepository {
+package repository;
+
+public interface IFacilityRepository {
 }

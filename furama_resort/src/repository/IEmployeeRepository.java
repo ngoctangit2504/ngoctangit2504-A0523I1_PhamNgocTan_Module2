@@ -1,2 +1,4 @@
-package repository;public interface IEmployeeRepository {
+package repository;
+
+public interface IEmployeeRepository {
 }

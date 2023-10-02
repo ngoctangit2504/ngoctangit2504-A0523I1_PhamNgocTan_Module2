@@ -1,2 +1,4 @@
-package service;public interface IBookingService {
+package service;
+
+public interface IBookingService {
 }

@@ -1,2 +1,4 @@
-package service;public interface ICustomerService {
+package service;
+
+public interface ICustomerService {
 }

@@ -1,2 +1,4 @@
-package repository.impl;public class FacilityRepository {
+package repository.impl;
+
+public class FacilityRepository {
 }

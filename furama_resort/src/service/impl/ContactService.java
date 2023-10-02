@@ -1,2 +1,4 @@
-package service.impl;public class ContactService {
+package service.impl;
+
+public class ContactService {
 }
