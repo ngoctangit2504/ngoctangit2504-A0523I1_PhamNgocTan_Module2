@@ -1,9 +1,15 @@
 package controllers;
 
+import service.impl.EmployeeService;
+
 import java.util.Scanner;
 
 public class FuramaController {
     public static void displayMainMenu() {
+
+        EmployeeService employeeService = new EmployeeService(); // dong nay cua employee
+
+
         boolean runMenuChinh = true;
         while (runMenuChinh) {
             try {
@@ -32,12 +38,15 @@ public class FuramaController {
                                 switch (choose1) {
                                     case 1:
                                         System.out.println("1oke");
+                                        employeeService.display();
                                         break;
                                     case 2:
                                         System.out.println("2oke");
+                                        employeeService.add();
                                         break;
                                     case 3:
                                         System.out.println("3oke");
+                                        employeeService.update();
                                         break;
                                     case 4:
                                         System.out.println("4oke");
