@@ -23,7 +23,6 @@ public class ReadAndWiteFile {
         }
     }
 
-
     // Phuong thuc doc file
     public static List<String> readCSV(String filePath) {
         List<String> stringList = new ArrayList<>();

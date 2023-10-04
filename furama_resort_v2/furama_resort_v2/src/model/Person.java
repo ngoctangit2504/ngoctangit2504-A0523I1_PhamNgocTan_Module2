@@ -1,7 +1,5 @@
 package model;
 
-import java.util.Date;
-
 public abstract class Person {
     private String hoTen;
     private String ngaySinh;
@@ -72,13 +70,12 @@ public abstract class Person {
 
     @Override
     public String toString() {
-        return "Person{" +
-                "hoTen='" + hoTen + '\'' +
-                ", ngaySinh=" + ngaySinh +
-                ", gioiTinh='" + gioiTinh + '\'' +
-                ", soCMND=" + soCMND +
-                ", soDienThoai=" + soDienThoai +
-                ", email='" + email + '\'' +
+        return "HoTen='" + hoTen + '\'' +
+                ", NgaySinh='" + ngaySinh + '\'' +
+                ", GioiTinh='" + gioiTinh + '\'' +
+                ", SoCMND=" + soCMND +
+                ", SoDienThoai=" + soDienThoai +
+                ", Email='" + email + '\'' +
                 '}';
     }
 }
