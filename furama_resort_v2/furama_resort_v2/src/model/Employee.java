@@ -1,7 +1,5 @@
 package model;
 
-import java.util.Date;
-
 public class Employee extends Person{
     private int maNhanVien;
     private String trinhDo;
@@ -9,7 +7,7 @@ public class Employee extends Person{
     private String viTri;
     private double luong;
 
-    public Employee() {
+    public Employee(String ngaySinh, String gioiTinh, String s, String s1, String email, String s2, String trinhDo, String viTri, String s3, String s4) {
     }
 
     public Employee(String hoTen, String ngaySinh, String gioiTinh, int soCMND, int soDienThoai, String email, int maNhanVien, String trinhDo,String viTri, double luong) {
@@ -61,7 +59,8 @@ public class Employee extends Person{
                 +getEmail()+","
                 +getMaNhanVien()+","
                 +getTrinhDo()+","
-                +getLuong()+",";
+                +getViTri()+","
+                +getLuong();
     }
 
     @Override

@@ -12,7 +12,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class StudentRepository implements IStudentRepository {
-    private final String PATH_STUDENT ="D:\\codegym\\demo2023\\module2\\A0523I1\\module2\\src\\ss8_mvc\\data\\student.csv";
+    private final String PATH_STUDENT ="D:\\CodeGym\\A0523I1_PhamNgocTan_Module2\\ngoctangit2504-A0523I1_PhamNgocTan_Module2\\demo_mvc\\ss8_mvc\\data\\student.csv";
 
     @Override
     public List<Student> getListStudent() {

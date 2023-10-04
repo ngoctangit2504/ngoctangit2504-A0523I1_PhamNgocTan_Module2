@@ -13,13 +13,13 @@ public class EmployeeRepository implements IEmployeeRepository {
     @Override
     public List<Employee> displayListEmployee() {
         List<Employee> employeeList = new ArrayList<>();
-//        List<String> stringList = ReadAndWiteFile.readCSV(PATH_EMPLOYEE);
-//        String[] array = null;
-//        for (String string: stringList) {
-//            array = string.split(",");
-//            Employee employee = new Employee();
-//            stringList.add(employee);
-//        }
+        List<String> stringList = ReadAndWiteFile.readCSV(PATH_EMPLOYEE);
+        String[] array = null;
+        for (String string: stringList) {
+            array = string.split(",");
+            Employee employee = new Employee(array[0],array[1],array[2],array[3],array[4],array[5],array[6],array[7],array[8],array[9]);
+            employeeList.add(employee);
+        }
         return employeeList;
     }
 

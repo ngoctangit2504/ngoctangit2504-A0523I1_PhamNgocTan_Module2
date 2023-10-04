@@ -7,12 +7,8 @@ import java.util.Scanner;
 public class FuramaController {
     public static void displayMainMenu() {
 
-        EmployeeService employeeService = new EmployeeService(); // dong nay cua employee
-
-
         boolean runMenuChinh = true;
         while (runMenuChinh) {
-            try {
                 Scanner scanner = new Scanner(System.in);
                 System.out.println("*---------Menu---------*");
                 System.out.println("1. Employee Management");
@@ -26,6 +22,7 @@ public class FuramaController {
 
                 switch (choose) {
                     case 1:
+                        EmployeeService employeeService = new EmployeeService(); // dong nay cua employee
                             boolean runMenu1 = true;
                             while (runMenu1) {
                                 System.out.println("*-----(1)Employee Management-----*");
@@ -37,11 +34,10 @@ public class FuramaController {
                                 int choose1 = scanner.nextInt();
                                 switch (choose1) {
                                     case 1:
-                                        System.out.println("1oke");
                                         employeeService.display();
                                         break;
                                     case 2:
-                                        System.out.println("2oke");
+                                        // chuc nang oke
                                         employeeService.add();
                                         break;
                                     case 3:
@@ -197,11 +193,6 @@ public class FuramaController {
                         System.out.println("Please select again!");
                         break;
                 }
-
-
-            } catch (Exception e) {
-                System.out.println("Yeu cau nhap so!");
-            }
 
         }
     }
