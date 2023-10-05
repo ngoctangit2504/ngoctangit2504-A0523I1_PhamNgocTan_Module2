@@ -1,6 +1,6 @@
 package model;
 
-public class Employee extends Person{
+public class Employee extends Person {
     private int maNhanVien;
     private String trinhDo;
     private String viTri;
@@ -9,7 +9,7 @@ public class Employee extends Person{
     public Employee() {
     }
 
-    public Employee( int maNhanVien, String hoTen, String ngaySinh, String gioiTinh, int soCMND, int soDienThoai, String email, String trinhDo, String viTri, double luong) {
+    public Employee(int maNhanVien, String hoTen, String ngaySinh, String gioiTinh, int soCMND, int soDienThoai, String email, String trinhDo, String viTri, double luong) {
         super(hoTen, ngaySinh, gioiTinh, soCMND, soDienThoai, email);
         this.maNhanVien = maNhanVien;
         this.trinhDo = trinhDo;
@@ -52,7 +52,7 @@ public class Employee extends Person{
     @Override
     public String toString() {
         return "Employee{" + " maNhanVien=" + maNhanVien +
-                ","+ super.toString() +
+                "," + super.toString() +
                 ", trinhDo='" + trinhDo + '\'' +
                 ", viTri='" + viTri + '\'' +
                 ", luong=" + luong +
@@ -61,14 +61,14 @@ public class Employee extends Person{
 
     public String getInfoToCSV() {
         return getMaNhanVien() + "," +
-                getHoTen()+ "," +
-                getNgaySinh()+ "," +
-                getGioiTinh()+ "," +
-                getSoCMND()+ "," +
-                getSoDienThoai()+ "," +
-                getEmail()+ "," +
-                getTrinhDo()+ "," +
-                getViTri()+ "," +
+                getHoTen() + "," +
+                getNgaySinh() + "," +
+                getGioiTinh() + "," +
+                getSoCMND() + "," +
+                getSoDienThoai() + "," +
+                getEmail() + "," +
+                getTrinhDo() + "," +
+                getViTri() + "," +
                 getLuong();
     }
 }

@@ -31,7 +31,42 @@ public class EmployeeRepository implements IEmployeeRepository {
     }
 
     @Override
-    public void editEmployee(int maNhanVien, Employee employee) {
+    public void editEmployee(int maNhanVien, Employee newEmployee) {
+        boolean check = false;
+        List<Employee> employeeList = displayListEmployee();
+        for (int i = 0; i < employeeList.size(); i++) {
+            if (employeeList.get(i).getMaNhanVien() == maNhanVien) {
+                employeeList.get(i).setHoTen(newEmployee.getHoTen());
+                employeeList.get(i).setNgaySinh(newEmployee.getNgaySinh());
+                employeeList.get(i).setGioiTinh(newEmployee.getGioiTinh());
+                employeeList.get(i).setSoCMND(newEmployee.getSoCMND());
+                employeeList.get(i).setSoDienThoai(newEmployee.getSoDienThoai());
+                employeeList.get(i).setEmail(newEmployee.getEmail());
+                employeeList.get(i).setTrinhDo(newEmployee.getTrinhDo());
+                employeeList.get(i).setViTri(newEmployee.getViTri());
+                employeeList.get(i).setLuong(newEmployee.getLuong());
+                check = true;
+                break;
+            }
+        }
+        if (check) {
+            List<String> stringList = new ArrayList<>();
+            for (Employee employee: employeeList) {
+                stringList.add(employee.getInfoToCSV());
+            }
+            ReadAndWriteFile.writeToCSV(PATH_EMPLOYEE,stringList,false);
+        } else {
+            System.out.println("Khong tim thay ma nhan vien !");
+        }
+    }
 
+    public Employee finByMaNhanVien(int maNhanVien) {
+        List<Employee> employeeList = displayListEmployee();
+        for (int i = 0; i < employeeList.size(); i++) {
+            if (employeeList.get(i).getMaNhanVien() == maNhanVien) {
+                return employeeList.get(i);
+            }
+        }
+        return null;
     }
 }

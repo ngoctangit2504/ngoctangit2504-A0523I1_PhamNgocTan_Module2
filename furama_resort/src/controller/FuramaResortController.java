@@ -43,6 +43,7 @@ public class FuramaResortController {
                                 break;
                             case 3:
                                 System.out.println("This is Edit employees");
+                                employeeService.edit();
                                 System.out.println("Edit oke!");
                                 break;
                             case 4:
