@@ -1,9 +1,12 @@
 package ss17_io_binary_file_and_serialization.exercise.product_management.controller;
 
+import ss17_io_binary_file_and_serialization.exercise.product_management.service.impl.Service;
+
 import java.util.Scanner;
 
 public class Controller {
     public static void displayMenu() {
+        Service service = new Service();
         boolean flag = true;
         while (flag) {
             System.out.println("MENU");
@@ -17,9 +20,11 @@ public class Controller {
             switch (choose) {
                 case 1:
                     System.out.println("Chuc nang hien thi");
+                    service.display();
                     break;
                 case 2:
                     System.out.println("Chuc nang them");
+                    service.add();
                     break;
                 case 3:
                     System.out.println("Chuc nang tim kiem");

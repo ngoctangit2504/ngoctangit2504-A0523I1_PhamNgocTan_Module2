@@ -1,7 +1,7 @@
 package ss17_io_binary_file_and_serialization.exercise.product_management.model;
 
 public class Product {
-    private int mSanPham;
+    private int maSanPham;
     private String tenSanPham;
     private String hangSanXuat;
     private double gia;
@@ -10,20 +10,20 @@ public class Product {
     public Product() {
     }
 
-    public Product(int mSanPham, String tenSanPham, String hangSanXuat, double gia, String moTa) {
-        this.mSanPham = mSanPham;
+    public Product(int maSanPham, String tenSanPham, String hangSanXuat, double gia, String moTa) {
+        this.maSanPham = maSanPham;
         this.tenSanPham = tenSanPham;
         this.hangSanXuat = hangSanXuat;
         this.gia = gia;
         this.moTa = moTa;
     }
 
-    public int getmSanPham() {
-        return mSanPham;
+    public int getMaSanPham() {
+        return maSanPham;
     }
 
-    public void setmSanPham(int mSanPham) {
-        this.mSanPham = mSanPham;
+    public void setMaSanPham(int maSanPham) {
+        this.maSanPham = maSanPham;
     }
 
     public String getTenSanPham() {
@@ -61,11 +61,19 @@ public class Product {
     @Override
     public String toString() {
         return "Product{" +
-                "mSanPham=" + mSanPham +
+                "maSanPham=" + maSanPham +
                 ", tenSanPham='" + tenSanPham + '\'' +
                 ", hangSanXuat='" + hangSanXuat + '\'' +
                 ", gia=" + gia +
                 ", moTa='" + moTa + '\'' +
                 '}';
+    }
+
+    public String getInfoToCSV() {
+        return getMaSanPham() + "," +
+                getTenSanPham() + "," +
+                getHangSanXuat() + "," +
+                getGia() + "," +
+                getMoTa();
     }
 }
