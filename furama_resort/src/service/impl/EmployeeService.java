@@ -3,18 +3,20 @@ package service.impl;
 import model.Employee;
 import repository.IEmployeeRepository;
 import repository.impl.EmployeeRepository;
+
 import java.util.List;
 import java.util.Scanner;
 
 public class EmployeeService implements service.IEmployeeService {
 
     private IEmployeeRepository employeeRepository = new EmployeeRepository();
+
     @Override
     public void display() {
         List<Employee> employees = employeeRepository.displayListEmployee();
         for (int i = 0; i < employees.size(); i++) {
             if (employees.get(i) != null) {
-                System.out.println((1+i) + "." + employees.get(i));
+                System.out.println((1 + i) + "." + employees.get(i));
             }
         }
     }
@@ -43,7 +45,7 @@ public class EmployeeService implements service.IEmployeeService {
         System.out.println("Nhap luong...");
         double luong = Double.parseDouble(scanner.nextLine());
 
-        Employee employee = new Employee(maNhanVien,hoTen,ngaySinh,gioitinh,soCMND,soDienThoai,email,trinhDo,viTri,luong);
+        Employee employee = new Employee(maNhanVien, hoTen, ngaySinh, gioitinh, soCMND, soDienThoai, email, trinhDo, viTri, luong);
         employeeRepository.addEmployee(employee);
     }
 
@@ -83,7 +85,7 @@ public class EmployeeService implements service.IEmployeeService {
             editEmployee.setViTri(newVitri);
             editEmployee.setLuong(newLuong);
 
-            employeeRepository.editEmployee(maNhanVien,editEmployee);
+            employeeRepository.editEmployee(maNhanVien, editEmployee);
         } else {
             System.out.println("Khong tim thay ma nhan vien !");
         }
