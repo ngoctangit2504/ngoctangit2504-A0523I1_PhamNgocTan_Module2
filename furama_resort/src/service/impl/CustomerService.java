@@ -26,18 +26,80 @@ public class CustomerService implements ICustomerService {
     @Override
     public void add() {
         Scanner scanner = new Scanner(System.in);
+
+        String regexMaKhachHang = "^[K][H][-][0-9]{4}$";
         System.out.println("Nhap ma khach hang...");
-        int maKhachHang = Integer.parseInt(scanner.nextLine());
+        String maKhachHang = scanner.nextLine();
+        boolean checkMaKhachhang = true;
+        checkMaKhachhang = maKhachHang.matches(regexMaKhachHang);
+        if (checkMaKhachhang == false) {
+            boolean flag = true;
+            while (flag) {
+                System.out.println("Nhap lai ma khach hang...");
+                String maKhachHangFix = scanner.nextLine();
+                if (maKhachHangFix.matches(regexMaKhachHang)) {
+                    flag = false;
+                    maKhachHang = maKhachHangFix;
+                }
+            }
+        }
+
+        String regexHoTen = "^([A-Z][a-z]{1,}[ ]{0,}){1,}$";
         System.out.println("Nhap ho ten...");
         String hoTen = scanner.nextLine();
+        boolean checkHoTen = true;
+        checkHoTen = hoTen.matches(regexHoTen);
+        if (checkHoTen == false) {
+            boolean flag = true;
+            while (flag) {
+                System.out.println("Nhap lai ho ten...");
+                String hoTenFix = scanner.nextLine();
+                if (hoTenFix.matches(regexHoTen)) {
+                    flag = false;
+                    hoTen = hoTenFix;
+                }
+            }
+        }
+
         System.out.println("Nhap ngay sinh...");
         String ngaySinh = scanner.nextLine();
         System.out.println("Nhap gioi tinh...");
         String gioitinh = scanner.nextLine();
+
+        String regexSoCMND = "^([0-9]{9}|[0-9]{12})$";
         System.out.println("Nhap so CMND...");
         String soCMND = scanner.nextLine();
+        boolean checkSoCMND = true;
+        checkSoCMND = soCMND.matches(regexSoCMND);
+        if (checkSoCMND == false) {
+            boolean flag = true;
+            while (flag) {
+                System.out.println("Nhap lai so CMND...");
+                String soCMNDFix = scanner.nextLine();
+                if (soCMNDFix.matches(regexSoCMND)) {
+                    flag = false;
+                    soCMND = soCMNDFix;
+                }
+            }
+        }
+
+        String regexSoDienThoai = "^[0][0-9]{9}$";
         System.out.println("Nhap so dien thoai...");
         String soDienThoai = scanner.nextLine();
+        boolean checkSoDienThoai = true;
+        checkSoDienThoai = soDienThoai.matches(regexSoDienThoai);
+        if (checkSoDienThoai == false) {
+            boolean flag = true;
+            while (flag) {
+                System.out.println("Nhap lai so dien thoai...");
+                String soDienThoaiFix = scanner.nextLine();
+                if (soDienThoaiFix.matches(regexSoDienThoai)) {
+                    flag = false;
+                    soDienThoai = soDienThoaiFix;
+                }
+            }
+        }
+
         System.out.println("Nhap email...");
         String email = scanner.nextLine();
         System.out.println("Nhap loai khach...");
@@ -53,7 +115,7 @@ public class CustomerService implements ICustomerService {
     public void edit() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Nhap ma khach hang can update");
-        int maKhachhang = Integer.parseInt(scanner.nextLine());
+        String maKhachhang = scanner.nextLine();
         Customer editCustomer = customerRepository.finByMaKhachHang(maKhachhang);
         if (editCustomer != null) {
             System.out.println("Nhap NEW ho ten");

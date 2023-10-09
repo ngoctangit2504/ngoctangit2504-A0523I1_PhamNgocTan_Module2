@@ -104,8 +104,22 @@ public class EmployeeService implements service.IEmployeeService {
         String trinhDo = scanner.nextLine();
         System.out.println("Nhap vi tri...");
         String viTri = scanner.nextLine();
-        System.out.println("Nhap luong...");
-        double luong = Double.parseDouble(scanner.nextLine());
+
+        boolean flagLuong = true;
+        double luong = -1;
+        NHAP_LUONG:
+        while (flagLuong) {
+            System.out.println("Nhap luong...");
+            try {
+                luong = Double.parseDouble(scanner.nextLine());
+                if (luong > 0) {
+                    flagLuong = false;
+                    luong = luong;
+                }
+            } catch (NumberFormatException e) {
+                continue NHAP_LUONG;
+            }
+        }
 
         Employee employee = new Employee(maNhanVien, hoTen, ngaySinh, gioitinh, soCMND, soDienThoai, email, trinhDo, viTri, luong);
         employeeRepository.addEmployee(employee);

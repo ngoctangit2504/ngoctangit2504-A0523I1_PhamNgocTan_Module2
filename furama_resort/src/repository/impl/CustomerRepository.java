@@ -1,7 +1,6 @@
 package repository.impl;
 
 import model.Customer;
-import model.Employee;
 import repository.ICustomerRepository;
 import util.ReadAndWriteFile;
 
@@ -17,9 +16,9 @@ public class CustomerRepository implements ICustomerRepository {
         List<Customer> customerList = new ArrayList<>();
         List<String> stringList = ReadAndWriteFile.readCSV(PATH_CUSTOMER);
         String[] array = null;
-        for (String string: stringList) {
+        for (String string : stringList) {
             array = string.split(",");
-            Customer customer = new Customer(Integer.parseInt(array[0]),array[1],array[2],array[3],array[4],array[5],array[6],array[7],array[8]);
+            Customer customer = new Customer(array[0], array[1], array[2], array[3], array[4], array[5], array[6], array[7], array[8]);
             customerList.add(customer);
         }
         return customerList;
@@ -29,15 +28,15 @@ public class CustomerRepository implements ICustomerRepository {
     public void addCustomer(Customer customer) {
         List<String> stringList = new ArrayList<>();
         stringList.add(customer.getInfoToCSV());
-        ReadAndWriteFile.writeToCSV(PATH_CUSTOMER,stringList,true);
+        ReadAndWriteFile.writeToCSV(PATH_CUSTOMER, stringList, true);
     }
 
     @Override
-    public void editCustomer(int maKhachHang, Customer newCustomer) {
+    public void editCustomer(String maKhachHang, Customer newCustomer) {
         boolean check = false;
         List<Customer> customerList = displayListCustomer();
         for (int i = 0; i < customerList.size(); i++) {
-            if (customerList.get(i).getMaKhachHang() == maKhachHang) {
+            if ((customerList.get(i).getMaKhachHang()).equals(maKhachHang)) {
                 customerList.get(i).setHoTen(newCustomer.getHoTen());
                 customerList.get(i).setNgaySinh(newCustomer.getNgaySinh());
                 customerList.get(i).setGioiTinh(newCustomer.getGioiTinh());
@@ -52,20 +51,20 @@ public class CustomerRepository implements ICustomerRepository {
         }
         if (check) {
             List<String> stringList = new ArrayList<>();
-            for (Customer customer: customerList) {
+            for (Customer customer : customerList) {
                 stringList.add(customer.getInfoToCSV());
             }
-            ReadAndWriteFile.writeToCSV(PATH_CUSTOMER,stringList,false);
+            ReadAndWriteFile.writeToCSV(PATH_CUSTOMER, stringList, false);
         } else {
             System.out.println("Khong tim thay ma khach hang !");
         }
     }
 
     @Override
-    public Customer finByMaKhachHang(int maKhachHang) {
+    public Customer finByMaKhachHang(String maKhachHang) {
         List<Customer> customerList = displayListCustomer();
         for (int i = 0; i < customerList.size(); i++) {
-            if (customerList.get(i).getMaKhachHang() == maKhachHang) {
+            if ((customerList.get(i).getMaKhachHang()).equals(maKhachHang)) {
                 return customerList.get(i);
             }
         }

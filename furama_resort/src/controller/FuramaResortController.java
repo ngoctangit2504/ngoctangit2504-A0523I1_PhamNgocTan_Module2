@@ -206,14 +206,23 @@ public class FuramaResortController {
                     break;
 
 
-
-
                 case 4:
-                    System.out.println("...");
+                    // Menu Booking Managerment
+                    System.out.println("Add new booking");
+                    System.out.println("Display list booking");
+                    System.out.println("Create new contracts");
+                    System.out.println("Display list contracts");
+                    System.out.println("Edit contracts");
+                    System.out.println("Return main menu");
                     break;
+
                 case 5:
-                    System.out.println("...");
+                    // Promotion Management
+                    System.out.println("Display list customers use service");
+                    System.out.println("Display list customers get voucher");
+                    System.out.println("Return main menu");
                     break;
+
                 case 6:
                     System.out.println("Is Exit");
                     flag = false;

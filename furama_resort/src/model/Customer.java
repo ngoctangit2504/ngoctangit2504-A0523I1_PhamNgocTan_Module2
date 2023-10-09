@@ -1,25 +1,25 @@
 package model;
 
-public class Customer extends Person{
-    private int maKhachHang;
+public class Customer extends Person {
+    private String maKhachHang;
     private String loaiKhach;
     private String diaChi;
 
     public Customer() {
     }
 
-    public Customer(int maKhachHang, String hoTen, String ngaySinh, String gioiTinh, String soCMND, String soDienThoai, String email, String loaiKhach, String diaChi) {
+    public Customer(String maKhachHang, String hoTen, String ngaySinh, String gioiTinh, String soCMND, String soDienThoai, String email, String loaiKhach, String diaChi) {
         super(hoTen, ngaySinh, gioiTinh, soCMND, soDienThoai, email);
         this.maKhachHang = maKhachHang;
         this.loaiKhach = loaiKhach;
         this.diaChi = diaChi;
     }
 
-    public int getMaKhachHang() {
+    public String getMaKhachHang() {
         return maKhachHang;
     }
 
-    public void setMaKhachHang(int maKhachHang) {
+    public void setMaKhachHang(String maKhachHang) {
         this.maKhachHang = maKhachHang;
     }
 
