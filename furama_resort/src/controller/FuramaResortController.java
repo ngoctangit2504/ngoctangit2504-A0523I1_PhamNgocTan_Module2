@@ -55,7 +55,7 @@ public class FuramaResortController {
                                 employeeService.display();
                                 break;
                             case 2:
-                                System.out.println("his is Add new employees");
+                                System.out.println("This is Add new employees");
                                 employeeService.add();
                                 System.out.println("Add oke!");
                                 break;

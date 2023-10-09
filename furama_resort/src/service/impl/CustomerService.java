@@ -35,9 +35,9 @@ public class CustomerService implements ICustomerService {
         System.out.println("Nhap gioi tinh...");
         String gioitinh = scanner.nextLine();
         System.out.println("Nhap so CMND...");
-        int soCMND = Integer.parseInt(scanner.nextLine());
+        String soCMND = scanner.nextLine();
         System.out.println("Nhap so dien thoai...");
-        int soDienThoai = Integer.parseInt(scanner.nextLine());
+        String soDienThoai = scanner.nextLine();
         System.out.println("Nhap email...");
         String email = scanner.nextLine();
         System.out.println("Nhap loai khach...");
@@ -63,9 +63,9 @@ public class CustomerService implements ICustomerService {
             System.out.println("Nhap NEW gioi tinh");
             String newGioitinh = scanner.nextLine();
             System.out.println("Nhap NEW so CMND");
-            int newSoCMND = Integer.parseInt(scanner.nextLine());
+            String newSoCMND = scanner.nextLine();
             System.out.println("Nhap NEW so dien thoi");
-            int newSoDienThoai = Integer.parseInt(scanner.nextLine());
+            String newSoDienThoai = scanner.nextLine();
             System.out.println("Nhap NEW email");
             String newEmail = scanner.nextLine();
             System.out.println("Nhap NEW loai khach");

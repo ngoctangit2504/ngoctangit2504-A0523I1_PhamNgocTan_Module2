@@ -24,18 +24,80 @@ public class EmployeeService implements service.IEmployeeService {
     @Override
     public void add() {
         Scanner scanner = new Scanner(System.in);
+
+        String regexMaNhanVien = "^[N][V][-][0-9]{4}$";
         System.out.println("Nhap ma nhan vien...");
-        int maNhanVien = Integer.parseInt(scanner.nextLine());
+        String maNhanVien = scanner.nextLine();
+        boolean checkMaNhanVien = true;
+        checkMaNhanVien = maNhanVien.matches(regexMaNhanVien);
+        if (checkMaNhanVien == false) {
+            boolean flag = true;
+            while (flag) {
+                System.out.println("Nhap lai ma nhan vien...");
+                String maNhanVienFix = scanner.nextLine();
+                if (maNhanVienFix.matches(regexMaNhanVien)) {
+                    flag = false;
+                    maNhanVien = maNhanVienFix;
+                }
+            }
+        }
+
+        String regexHoTen = "^([A-Z][a-z]{1,}[ ]{0,}){1,}$";
         System.out.println("Nhap ho ten...");
         String hoTen = scanner.nextLine();
+        boolean checkHoTen = true;
+        checkHoTen = hoTen.matches(regexHoTen);
+        if (checkHoTen == false) {
+            boolean flag = true;
+            while (flag) {
+                System.out.println("Nhap lai ho ten...");
+                String hoTenFix = scanner.nextLine();
+                if (hoTenFix.matches(regexHoTen)) {
+                    flag = false;
+                    hoTen = hoTenFix;
+                }
+            }
+        }
+
         System.out.println("Nhap ngay sinh...");
         String ngaySinh = scanner.nextLine();
         System.out.println("Nhap gioi tinh...");
         String gioitinh = scanner.nextLine();
+
+        String regexSoCMND = "^([0-9]{9}|[0-9]{12})$";
         System.out.println("Nhap so CMND...");
-        int soCMND = Integer.parseInt(scanner.nextLine());
+        String soCMND = scanner.nextLine();
+        boolean checkSoCMND = true;
+        checkSoCMND = soCMND.matches(regexSoCMND);
+        if (checkSoCMND == false) {
+            boolean flag = true;
+            while (flag) {
+                System.out.println("Nhap lai so CMND...");
+                String soCMNDFix = scanner.nextLine();
+                if (soCMNDFix.matches(regexSoCMND)) {
+                    flag = false;
+                    soCMND = soCMNDFix;
+                }
+            }
+        }
+
+        String regexSoDienThoai = "^[0][0-9]{9}$";
         System.out.println("Nhap so dien thoai...");
-        int soDienThoai = Integer.parseInt(scanner.nextLine());
+        String soDienThoai = scanner.nextLine();
+        boolean checkSoDienThoai = true;
+        checkSoDienThoai = soDienThoai.matches(regexSoDienThoai);
+        if (checkSoDienThoai == false) {
+            boolean flag = true;
+            while (flag) {
+                System.out.println("Nhap lai so dien thoai...");
+                String soDienThoaiFix = scanner.nextLine();
+                if (soDienThoaiFix.matches(regexSoDienThoai)) {
+                    flag = false;
+                    soDienThoai = soDienThoaiFix;
+                }
+            }
+        }
+
         System.out.println("Nhap email...");
         String email = scanner.nextLine();
         System.out.println("Nhap trinh do...");
@@ -53,7 +115,7 @@ public class EmployeeService implements service.IEmployeeService {
     public void edit() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Nhap ma nhan vien can update");
-        int maNhanVien = Integer.parseInt(scanner.nextLine());
+        String maNhanVien = scanner.nextLine();
         Employee editEmployee = employeeRepository.finByMaNhanVien(maNhanVien);
         if (editEmployee != null) {
             System.out.println("Nhap NEW ho ten");
@@ -63,9 +125,9 @@ public class EmployeeService implements service.IEmployeeService {
             System.out.println("Nhap NEW gioi tinh");
             String newGioitinh = scanner.nextLine();
             System.out.println("Nhap NEW so CMND");
-            int newSoCMND = Integer.parseInt(scanner.nextLine());
-            System.out.println("Nhap NEW so dien thoi");
-            int newSoDienThoai = Integer.parseInt(scanner.nextLine());
+            String newSoCMND = scanner.nextLine();
+            System.out.println("Nhap NEW so dien thoai");
+            String newSoDienThoai = scanner.nextLine();
             System.out.println("Nhap NEW email");
             String newEmail = scanner.nextLine();
             System.out.println("Nhap NEW trinh do");

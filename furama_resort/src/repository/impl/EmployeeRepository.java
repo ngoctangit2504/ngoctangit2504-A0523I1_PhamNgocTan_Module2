@@ -17,7 +17,7 @@ public class EmployeeRepository implements IEmployeeRepository {
         String[] array = null;
         for (String string: stringList) {
             array = string.split(",");
-            Employee employee = new Employee(Integer.parseInt(array[0]),array[1],array[2],array[3],Integer.parseInt(array[4]),Integer.parseInt(array[5]),array[6],array[7],array[8],Double.parseDouble(array[9]));
+            Employee employee = new Employee(array[0],array[1],array[2],array[3],array[4],array[5],array[6],array[7],array[8],Double.parseDouble(array[9]));
             employeeList.add(employee);
         }
         return employeeList;
@@ -31,11 +31,11 @@ public class EmployeeRepository implements IEmployeeRepository {
     }
 
     @Override
-    public void editEmployee(int maNhanVien, Employee newEmployee) {
+    public void editEmployee(String maNhanVien, Employee newEmployee) {
         boolean check = false;
         List<Employee> employeeList = displayListEmployee();
         for (int i = 0; i < employeeList.size(); i++) {
-            if (employeeList.get(i).getMaNhanVien() == maNhanVien) {
+            if ((employeeList.get(i).getMaNhanVien()).equals(maNhanVien)) {
                 employeeList.get(i).setHoTen(newEmployee.getHoTen());
                 employeeList.get(i).setNgaySinh(newEmployee.getNgaySinh());
                 employeeList.get(i).setGioiTinh(newEmployee.getGioiTinh());
@@ -60,10 +60,10 @@ public class EmployeeRepository implements IEmployeeRepository {
         }
     }
 
-    public Employee finByMaNhanVien(int maNhanVien) {
+    public Employee finByMaNhanVien(String maNhanVien) {
         List<Employee> employeeList = displayListEmployee();
         for (int i = 0; i < employeeList.size(); i++) {
-            if (employeeList.get(i).getMaNhanVien() == maNhanVien) {
+            if ((employeeList.get(i).getMaNhanVien()).equals(maNhanVien)) {
                 return employeeList.get(i);
             }
         }

@@ -1,7 +1,7 @@
 package model;
 
 public class Employee extends Person {
-    private int maNhanVien;
+    private String maNhanVien;
     private String trinhDo;
     private String viTri;
     private double luong;
@@ -9,7 +9,7 @@ public class Employee extends Person {
     public Employee() {
     }
 
-    public Employee(int maNhanVien, String hoTen, String ngaySinh, String gioiTinh, int soCMND, int soDienThoai, String email, String trinhDo, String viTri, double luong) {
+    public Employee(String maNhanVien, String hoTen, String ngaySinh, String gioiTinh, String soCMND, String soDienThoai, String email, String trinhDo, String viTri, double luong) {
         super(hoTen, ngaySinh, gioiTinh, soCMND, soDienThoai, email);
         this.maNhanVien = maNhanVien;
         this.trinhDo = trinhDo;
@@ -17,11 +17,11 @@ public class Employee extends Person {
         this.luong = luong;
     }
 
-    public int getMaNhanVien() {
+    public String getMaNhanVien() {
         return maNhanVien;
     }
 
-    public void setMaNhanVien(int maNhanVien) {
+    public void setMaNhanVien(String maNhanVien) {
         this.maNhanVien = maNhanVien;
     }
 
