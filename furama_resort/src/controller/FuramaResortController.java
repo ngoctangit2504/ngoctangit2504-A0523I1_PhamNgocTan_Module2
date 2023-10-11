@@ -2,6 +2,7 @@ package controller;
 
 import service.impl.CustomerService;
 import service.impl.EmployeeService;
+import service.impl.VillaService;
 
 import java.util.Scanner;
 
@@ -174,6 +175,9 @@ public class FuramaResortController {
                                     switch (choose) {
                                         case 1:
                                             System.out.println("Add New Villa");
+                                            VillaService villaService = new VillaService();
+                                            villaService.addVi();
+                                            System.out.println("Add Villa thanh cong");
                                             break;
                                         case 2:
                                             System.out.println("Add New House");
