@@ -1,8 +1,6 @@
 package controller;
 
-import service.impl.CustomerService;
-import service.impl.EmployeeService;
-import service.impl.VillaService;
+import service.impl.*;
 
 import java.util.Scanner;
 
@@ -181,9 +179,15 @@ public class FuramaResortController {
                                             break;
                                         case 2:
                                             System.out.println("Add New House");
+                                            HouseService houseService = new HouseService();
+                                            houseService.addHo();
+                                            System.out.println("Add House thanh cong");
                                             break;
                                         case 3:
                                             System.out.println("Add New Room");
+                                            RoomService roomService = new RoomService();
+                                            roomService.addRo();
+                                            System.out.println("Add room thanh cong");
                                             break;
                                         case 4:
                                             System.out.println("Back to menu");
