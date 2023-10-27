@@ -45,6 +45,8 @@ public class ReadAndWrite {
         return stringList;
     }
 
+
+
    // ghi một list vào trong file binary
     public static void writeListObjectToCSV(String filePath, List<Student> studentList){
       File file = new File(filePath);

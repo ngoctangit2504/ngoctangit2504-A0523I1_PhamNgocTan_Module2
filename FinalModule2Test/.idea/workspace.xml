@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="69deabfd-fbd3-4943-a440-ed96e353c583" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../FinalModule2/src/controller/BenhAnController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FinalModule2/src/data/DataBenhNhanThuong.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FinalModule2/src/data/DataBenhNhanVip.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FinalModule2/src/model/BenhAn.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FinalModule2/src/model/BenhNhanThuong.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FinalModule2/src/model/BenhNhanVip.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FinalModule2/src/repository/IBenhAnRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FinalModule2/src/repository/impl/BenhNhanThuongRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FinalModule2/src/repository/impl/BenhNhanVipRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FinalModule2/src/service/IBenhAnService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FinalModule2/src/service/impl/BenhNhanThuongService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FinalModule2/src/service/impl/BenhNhanVipService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FinalModule2/src/util/ReadAndWrite.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FinalModule2/src/view/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controller/BenhAnController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/DataBenhAn.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/BenhAn.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/BenhNhanThuong.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/BenhNhanVip.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/repository/IBenhAnRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/repository/impl/BenhAnRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/service/IBenhAnService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/service/impl/BenhAnService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/util/ReadAndWrite.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Good/src/controller/TaiKhoanNganHangController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Good/src/data/DataTaiKhoanThanhToan" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Good/src/data/DataTaiKhoanTietKiem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Good/src/model/TaiKhoanNganHang.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Good/src/model/TaiKhoanThanhToan.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Good/src/model/TaiKhoanTietKiem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Good/src/repository/ITaiKhoanNganHangRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Good/src/repository/impl/TaiKhoanThanhToanRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Good/src/repository/impl/TaiKhoanTietKiemRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Good/src/service/ITaiKhoanNganHangService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Good/src/service/impl/TaiKhoanThanhToanService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Good/src/service/impl/TaiKhoanTietKiemService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Good/src/util/ReadAndWrite.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Good/src/view/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Thi_thu_lan2/ThiThuLan2/src/controller/PhuongTienController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Thi_thu_lan2/ThiThuLan2/src/data/DataOto.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Thi_thu_lan2/ThiThuLan2/src/data/DataXeMay.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Thi_thu_lan2/ThiThuLan2/src/data/DataXeTai.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Thi_thu_lan2/ThiThuLan2/src/model/Oto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Thi_thu_lan2/ThiThuLan2/src/model/PhuongTien.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Thi_thu_lan2/ThiThuLan2/src/model/XeMay.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Thi_thu_lan2/ThiThuLan2/src/model/XeTai.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Thi_thu_lan2/ThiThuLan2/src/repository/IPhuongTienRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Thi_thu_lan2/ThiThuLan2/src/repository/impl/OtoRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Thi_thu_lan2/ThiThuLan2/src/repository/impl/XeMayRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Thi_thu_lan2/ThiThuLan2/src/repository/impl/XeTaiRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Thi_thu_lan2/ThiThuLan2/src/service/IPhuongTienService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Thi_thu_lan2/ThiThuLan2/src/service/impl/OtoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Thi_thu_lan2/ThiThuLan2/src/service/impl/XeMayService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Thi_thu_lan2/ThiThuLan2/src/service/impl/XeTaiService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Thi_thu_lan2/ThiThuLan2/src/util/ReadAndWrite.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Thi_thu_lan2/ThiThuLan2/src/view/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module2/src/test_java_tn/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2/out/production/module2/test_java_tn/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2/src/out/production/module2/test_java_tn/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../module2/src/out/production/module2/test_java_tn/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2/src/test_java_tn/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../module2/src/test_java_tn/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss8_mvc/util/ReadAndWrite.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ss8_mvc/util/ReadAndWrite.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2XAZf9lSaTJtmbdXyYF6dVPTOAo" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/CodeGym/A0523I1_PhamNgocTan_Module2/ngoctangit2504-A0523I1_PhamNgocTan_Module2/Good&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="view.Main" />
+      <module name="FinalModule2Test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="view.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="69deabfd-fbd3-4943-a440-ed96e353c583" name="Changes" comment="" />
+      <created>1698073946471</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1698073946471</updated>
+      <workItem from="1698073947722" duration="38000" />
+      <workItem from="1698074014947" duration="117000" />
+      <workItem from="1698074153890" duration="29000" />
+      <workItem from="1698074206495" duration="30000" />
+      <workItem from="1698074253981" duration="105000" />
+      <workItem from="1698074393025" duration="114000" />
+      <workItem from="1698074540619" duration="986000" />
+      <workItem from="1698075549864" duration="159000" />
+      <workItem from="1698075733509" duration="95000" />
+      <workItem from="1698075850338" duration="587000" />
+      <workItem from="1698076476235" duration="434000" />
+      <workItem from="1698076929741" duration="103000" />
+      <workItem from="1698077065086" duration="1088000" />
+      <workItem from="1698078179199" duration="177000" />
+      <workItem from="1698078373928" duration="247000" />
+      <workItem from="1698078649863" duration="217000" />
+      <workItem from="1698078890911" duration="1949000" />
+      <workItem from="1698080865384" duration="1311000" />
+      <workItem from="1698082213083" duration="644000" />
+      <workItem from="1698082878036" duration="236000" />
+      <workItem from="1698085207141" duration="239000" />
+      <workItem from="1698085556687" duration="7000" />
+      <workItem from="1698159877409" duration="3665000" />
+      <workItem from="1698163639025" duration="3325000" />
+      <workItem from="1698167016234" duration="385000" />
+      <workItem from="1698230340345" duration="17000" />
+      <workItem from="1698235483865" duration="13000" />
+      <workItem from="1698235625566" duration="18000" />
+      <workItem from="1698236233946" duration="26000" />
+      <workItem from="1698236749968" duration="20000" />
+      <workItem from="1698236973512" duration="25000" />
+      <workItem from="1698237046676" duration="11000" />
+      <workItem from="1698237117078" duration="11000" />
+      <workItem from="1698237250595" duration="39000" />
+      <workItem from="1698237432022" duration="19000" />
+      <workItem from="1698237497082" duration="27000" />
+      <workItem from="1698237556200" duration="13000" />
+      <workItem from="1698237618757" duration="15000" />
+      <workItem from="1698237690435" duration="9000" />
+      <workItem from="1698237884555" duration="27000" />
+      <workItem from="1698241278257" duration="21000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.ArrayIndexOutOfBoundsException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
